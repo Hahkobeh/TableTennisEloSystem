@@ -1,6 +1,7 @@
 package jacobartuso.tabletenniselosystem.user;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("users")
@@ -12,37 +13,34 @@ public class User {
     private int password;
     private int rating;
     private boolean verified;
+    private int unactualizedRating;
 
 
-    public User(String id, String name, String email, int password, int rating, boolean verified) {
-
+    public User(String id, String name, String email, int password, int rating, boolean verified, int unactualizedRating) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
         this.rating = rating;
         this.verified = verified;
+        this.unactualizedRating = unactualizedRating;
     }
 
-    public User(String name, String email, int password, int rating, boolean verified) {
-
+    public User(String name, String email, int password, int rating, boolean verified, int unactualizedRating) {
         this.name = name;
         this.email = email;
         this.password = password;
         this.rating = rating;
         this.verified = verified;
+        this.unactualizedRating = unactualizedRating;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", password=" + password +
-                ", rating=" + rating +
-                ", verified=" + verified +
-                '}';
+    public int getUnactualizedRating() {
+        return unactualizedRating;
+    }
+
+    public void setUnactualizedRating(int unactualizedRating) {
+        this.unactualizedRating = unactualizedRating;
     }
 
     public String getName() {

@@ -57,4 +57,9 @@ public class UserController {
 
     }
 
+    @GetMapping("/top")
+    public List<User> getPlayerRankings(){
+        return userService.getPlayerRankings();
+    }
+
 }

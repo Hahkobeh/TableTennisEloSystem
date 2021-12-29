@@ -3,6 +3,8 @@ package jacobartuso.tabletenniselosystem.user;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -59,18 +61,11 @@ public class UserService {
         int loserRating = loser.getRating();
         double change;
 
-
-        //TODO determine change
-
         double difference = loserRating - winnerRating;
         //chance that winner wins
         double predictedOutcome = 1 / ( 1 + pow(10,(difference)/400));
         change = 32*(1 - predictedOutcome);
         change = round(change);
-
-
-
-
 
         changeUserRating(winner.getId(), winnerRating + (int)change);
         changeUserRating(loser.getId(), loserRating - (int)change);
@@ -79,4 +74,14 @@ public class UserService {
 
 
     }
+
+    public List<User> getPlayerRankings(){
+        List<User> userList = userRepository.findAll();
+        userList.sort(Comparator.comparingInt(User::getRating));
+        return userList;
+    }
+
+
+
+
 }
