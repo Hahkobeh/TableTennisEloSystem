@@ -8,6 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/v1/user")
+@CrossOrigin(origins = "http://localhost:3000")
 public class UserController {
 
 
@@ -22,9 +23,9 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping
-    public String hello(){
-        return "hello world!/h";
+    @GetMapping("/getuser")
+    public User hello(){
+        return new User(new ObjectId().toString(),"jeff","jeff@ucalgary.ca",1232,900,false,0);
     }
 
     //move all to service
@@ -49,13 +50,17 @@ public class UserController {
     @PutMapping("/{winnerId}/{loserId}")
     public void updateUsers(@PathVariable String winnerId, @PathVariable String loserId) {
         try {
-            userService.updateUsers(winnerId,loserId);
+            System.out.println(winnerId + loserId);
+            //userService.updateUsers(winnerId,loserId);
         }catch (UserNotFoundException e){
             //TODO add this once ui working
             System.err.println("USER NOT FOUND!");
         }
 
     }
+
+
+
 
     @GetMapping("/top")
     public List<User> getPlayerRankings(){
