@@ -23,10 +23,6 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/getuser")
-    public User hello(){
-        return new User(new ObjectId().toString(),"jeff","jeff@ucalgary.ca",1232,900,false,0);
-    }
 
     //move all to service
 

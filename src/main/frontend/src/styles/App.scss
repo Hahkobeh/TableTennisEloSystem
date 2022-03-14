@@ -1,0 +1,22 @@
+@import 'colours';
+
+.main-logo{
+    display: block;
+    margin: 20% auto;
+}
+
+.label{
+    color: $dark_blue;
+}
+
+.button-1{
+    width: 125px;
+    height: 61px;
+    border-radius: 35px;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: $light_blue;
+    background-color: $dark_blue;
+
+}

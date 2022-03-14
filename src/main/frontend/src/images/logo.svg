@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="236" height="192.369" viewBox="0 0 236 192.369">
+  <g id="Group_26" data-name="Group 26" transform="translate(-43 -9.631)">
+    <circle id="Ellipse_4" data-name="Ellipse 4" cx="95" cy="95" r="95" transform="translate(66 12)" fill="#ff6d6d"/>
+    <ellipse id="Ellipse_9" data-name="Ellipse 9" cx="40" cy="54.5" rx="40" ry="54.5" transform="matrix(0.695, 0.719, -0.719, 0.695, 189.408, 9.631)" fill="#2c5674"/>
+    <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="11" cy="6" rx="11" ry="6" transform="translate(104.03 144.759) rotate(42)" fill="#2c5674"/>
+    <rect id="Rectangle_10" data-name="Rectangle 10" width="22" height="56" transform="translate(137.486 107.602) rotate(42)" fill="#2c5674"/>
+    <rect id="Rectangle_10-2" data-name="Rectangle 10" width="4.515" height="53.492" transform="translate(137.617 110.39) rotate(42)" fill="#fff"/>
+    <ellipse id="Ellipse_5" data-name="Ellipse 5" cx="41" cy="54.5" rx="41" ry="54.5" transform="matrix(0.695, 0.719, -0.719, 0.695, 190.103, 9.631)" fill="#fff"/>
+    <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="40" cy="54.5" rx="40" ry="54.5" transform="matrix(0.695, 0.719, -0.719, 0.695, 191.492, 11.069)" fill="#2c5674"/>
+    <g id="Component_1_1" data-name="Component 1 – 1" transform="translate(43 56)">
+      <text id="UofC" transform="translate(0 90)" fill="#0d344e" font-size="113" font-family="PMingLiU-ExtB"><tspan x="0" y="0">UofC</tspan></text>
+    </g>
+  </g>
+</svg>
